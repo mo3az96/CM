@@ -9,3 +9,108 @@
         display: flex;
     }
 }
+
+.navbar-cont {
+    .close-menu {
+        display: none;
+        font-size: 22px;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+        left: 25px;
+        margin: 0;
+        position: absolute;
+        z-index: 99;
+        color: $footer;
+        top: 22px;
+
+        @include xs {
+            display: flex;
+        }
+    }
+
+    .top-link {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        top: 25px;
+        right: 25px;
+
+        @include xs {
+            display: flex;
+        }
+    }
+
+    @include xs {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($purple, 0.5);
+        z-index: 99;
+        display: none;
+
+        .mo-navbar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: #fff;
+            right: 0;
+            width: 0;
+            padding-top: 80px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0;
+            z-index: 9;
+            transform-origin: right;
+            overflow: hidden;
+            @include transition(all 0.5s ease-in-out);
+
+
+            &.mo-nav-open {
+                width: 280px;
+            }
+        }
+
+        .nav-li {
+            margin: 5px 0;
+            padding: 0 25px;
+            width: 280px;
+
+            .nav-anchor {
+                justify-content: space-between;
+
+                &:after {
+                    font-size: 10px;
+                }
+            }
+
+            &:hover {
+                .dropmenu {
+                    transform: none;
+                }
+            }
+        }
+
+        .drop-mob {
+            display: none;
+        }
+
+        .dropmenu {
+            position: relative;
+            top: auto;
+            bottom: auto;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            left: auto;
+            right: auto;
+            box-shadow: none;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: right;
+            padding: 0;
+        }
+    }
+}
