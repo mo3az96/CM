@@ -530,6 +530,9 @@ html {
   }
 }
 
+.main-slider-sec {
+  overflow: hidden;
+}
 .main-slider-sec:after {
   content: "";
   display: block;
@@ -641,6 +644,7 @@ html {
   -moz-background-clip: text;
   -o-background-clip: text;
   color: transparent;
+  padding: 10px 0 3px;
   font-size: 36px;
   font-family: med;
   margin-bottom: 23px;
@@ -947,6 +951,7 @@ header ._1st-sec {
   -moz-background-clip: text;
   -o-background-clip: text;
   color: transparent;
+  padding: 10px 0 3px;
   margin-top: 29px;
   line-height: 47px;
 }
@@ -1168,6 +1173,7 @@ header ._1st-sec {
   -moz-background-clip: text;
   -o-background-clip: text;
   color: transparent;
+  padding: 10px 0 3px;
   margin-top: 26px;
   margin-bottom: 15px;
 }
@@ -1310,6 +1316,7 @@ header ._1st-sec {
   -moz-background-clip: text;
   -o-background-clip: text;
   color: transparent;
+  padding: 10px 0 3px;
   font-size: 25px;
   font-family: bold;
   line-height: 1.44;
