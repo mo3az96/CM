@@ -347,6 +347,10 @@
             .sign {
                 margin-left: 0;
                 margin-right: 23px;
+
+                @include xs {
+                    margin-right: 0;
+                }
             }
 
             &.phone {

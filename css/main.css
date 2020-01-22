@@ -1951,6 +1951,11 @@ html[dir=ltr] footer .contact .sign {
   margin-left: 0;
   margin-right: 23px;
 }
+@media (max-width: 767px) {
+  html[dir=ltr] footer .contact .sign {
+    margin-right: 0;
+  }
+}
 html[dir=ltr] footer .contact.phone .sign:before {
   transform: none;
 }
