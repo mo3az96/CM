@@ -785,11 +785,12 @@ header .header {
 }
 header .logo {
   display: flex;
-  max-width: 206px;
+  width: 206px;
 }
 @media (max-width: 767px) {
   header .logo {
-    max-width: 120px;
+    width: 120px;
+    height: auto;
   }
 }
 header .top-links {

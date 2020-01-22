@@ -11,10 +11,11 @@ header {
 
     .logo {
         display: flex;
-        max-width: 206px;
+        width: 206px;
 
         @include xs {
-            max-width: 120px;
+            width: 120px;
+            height: auto;
         }
     }
 
