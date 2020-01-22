@@ -70,64 +70,66 @@ $(document).ready(function () {
         $(".foot-links").addClass("mo-panel");
         $(".Clients-slider ._2nd-sec").addClass("swiper-wrapper");
         $(".clients-item").wrap("<div class='swiper-slide'></div>");
+
+        $('.mo-accordion').click(function () {
+            var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
+            $(".mo-accordion").not(this).removeClass("active");
+            $(this).toggleClass("active");
+            if ($(this).siblings().css('max-height') == '0px') {
+                $(this).siblings().css('max-height', x);
+                $(this).siblings().css('padding-top', "15px");
+            } else {
+                $(this).siblings().css('max-height', '0');
+                $(this).siblings().css('padding-top', "0");
+            }
+
+            $(".mo-accordion").not(this).siblings().css('max-height', '0');
+            $(".mo-accordion").not(this).siblings().css('padding-top', "0");
+        })
+
+        var swiper = new Swiper('.news', {
+            pagination: {
+                el: '.news .swiper-pagination',
+                clickable: true,
+            },
+            // navigation: {
+            //     nextEl: '.main-slider .swiper-button-next',
+            //     prevEl: '.main-slider .swiper-button-prev',
+            // },
+            autoplay: {
+                delay: 10000,
+            },
+            spaceBetween: 10,
+            loop: true,
+            simulateTouch: true,
+            breakpoints: {
+                500: {
+                    navigation: false
+                },
+            }
+        });
+        var swiper = new Swiper('.Clients-slider', {
+            pagination: {
+                el: '.Clients-slider .swiper-pagination',
+                clickable: true,
+            },
+            // navigation: {
+            //     nextEl: '.main-slider .swiper-button-next',
+            //     prevEl: '.main-slider .swiper-button-prev',
+            // },
+            autoplay: {
+                delay: 10000,
+            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            simulateTouch: true,
+            breakpoints: {
+                500: {
+                    navigation: false
+                },
+            }
+        });
     }
-    $('.mo-accordion').click(function () {
-        var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
-        $(".mo-accordion").not(this).removeClass("active");
-        $(this).toggleClass("active");
-        if ($(this).siblings().css('max-height') == '0px') {
-            $(this).siblings().css('max-height', x);
-            $(this).siblings().css('padding-top', "15px");
-        } else {
-            $(this).siblings().css('max-height', '0');
-            $(this).siblings().css('padding-top', "0");
-        }
 
-        $(".mo-accordion").not(this).siblings().css('max-height', '0');
-        $(".mo-accordion").not(this).siblings().css('padding-top', "0");
-    })
-
-    var swiper = new Swiper('.news', {
-        pagination: {
-            el: '.news .swiper-pagination',
-            clickable: true,
-        },
-        // navigation: {
-        //     nextEl: '.main-slider .swiper-button-next',
-        //     prevEl: '.main-slider .swiper-button-prev',
-        // },
-        autoplay: {
-            delay: 10000,
-        },
-        spaceBetween: 10,
-        loop: true,
-        simulateTouch: true,
-        breakpoints: {
-            500: {
-                navigation: false
-            },
-        }
-    });
-    var swiper = new Swiper('.Clients-slider', {
-        pagination: {
-            el: '.Clients-slider .swiper-pagination',
-            clickable: true,
-        },
-        // navigation: {
-        //     nextEl: '.main-slider .swiper-button-next',
-        //     prevEl: '.main-slider .swiper-button-prev',
-        // },
-        autoplay: {
-            delay: 10000,
-        },
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop: true,
-        simulateTouch: true,
-        breakpoints: {
-            500: {
-                navigation: false
-            },
-        }
-    });
 });

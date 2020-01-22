@@ -59,6 +59,12 @@
             }
 
         }
+
+        &:hover {
+            .dropmenu {
+                transform: translate(-50%, 0);
+            }
+        }
     }
 
     .search {

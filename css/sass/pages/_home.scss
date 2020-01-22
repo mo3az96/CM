@@ -117,6 +117,11 @@
     padding-bottom: 135px;
     margin-top: 105px;
 
+    @include xs {
+        background-attachment: unset;
+        background-position: top center;
+    }
+
     .services-head {
         position: relative;
     }
@@ -334,6 +339,11 @@
     @include xs {
         padding-top: 20px;
         padding-bottom: 50px;
+    }
+
+    @include xs {
+        background-attachment: unset;
+        background-position: top center;
     }
 
     .numbers {

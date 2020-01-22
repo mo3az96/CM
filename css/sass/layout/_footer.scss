@@ -6,6 +6,11 @@ footer {
     background-attachment: fixed;
     background-size: cover;
 
+    @include xs {
+        background-attachment: unset;
+        background-position: top center;
+    }
+
     .contacts {
         @include flex(center, flex-start);
         padding-bottom: 70px;

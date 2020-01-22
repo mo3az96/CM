@@ -72,8 +72,6 @@
 body {
   position: relative;
   font-family: sst;
-  height: 5000px;
-  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   background-color: rgba(199, 199, 199, 0.5);
@@ -965,6 +963,12 @@ header ._1st-sec {
   padding-bottom: 135px;
   margin-top: 105px;
 }
+@media (max-width: 767px) {
+  .services-cont {
+    background-attachment: unset;
+    background-position: top center;
+  }
+}
 .services-cont .services-head {
   position: relative;
 }
@@ -1194,6 +1198,12 @@ header ._1st-sec {
   .numbers-cont {
     padding-top: 20px;
     padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .numbers-cont {
+    background-attachment: unset;
+    background-position: top center;
   }
 }
 .numbers-cont .numbers {
@@ -1715,6 +1725,9 @@ html[dir=ltr] .mo-dropdown .dropmenu .nav-anchor {
   font-size: 15px;
   white-space: nowrap;
 }
+html[dir=ltr] .mo-dropdown:hover .dropmenu {
+  transform: translate(-50%, 0);
+}
 html[dir=ltr] .search .search-form {
   left: 30px;
   right: auto;
@@ -2027,6 +2040,12 @@ footer {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+@media (max-width: 767px) {
+  footer {
+    background-attachment: unset;
+    background-position: top center;
+  }
 }
 footer .contacts {
   display: flex;
