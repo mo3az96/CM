@@ -20,6 +20,10 @@
     margin-top: 50px;
     position: relative;
 
+    @include xs {
+        margin-top: 30px;
+    }
+
     .slider-pattern {
         position: absolute;
         right: 0;

@@ -1,0 +1,11 @@
+.menu-open {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    @include transition(all 0.3s ease-in-out);
+    margin-left: 25px;
+
+    @include xs {
+        display: flex;
+    }
+}

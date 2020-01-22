@@ -1,6 +1,10 @@
 header {
     padding-top: 20px;
 
+    @include xs {
+        padding-top: 15px;
+    }
+
     .header {
         position: relative;
     }
@@ -8,6 +12,10 @@ header {
     .logo {
         display: flex;
         max-width: 206px;
+
+        @include xs {
+            max-width: 120px;
+        }
     }
 
     .top-links {
@@ -57,6 +65,10 @@ header {
     .main-header {
         @include flex(flex-end, space-between);
         padding-top: 8px;
+
+        @include xs {
+            padding: 0;
+        }
     }
 
     ._1st-sec {
