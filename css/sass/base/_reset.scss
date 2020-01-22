@@ -1,0 +1,25 @@
+body {
+    position: relative;
+    font-family: sst;
+    height: 5000px;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        background-color: rgba(#c7c7c7, 0.5);
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include gred(90deg)
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #a22891 rgba(#c7c7c7, 0.5);
+}
+
+.overflow {
+    overflow: hidden !important;
+}

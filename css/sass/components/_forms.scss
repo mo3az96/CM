@@ -1,0 +1,214 @@
+.search {
+    position: relative;
+
+    .search-control {
+        font-size: 22px;
+        @include flex(center, center);
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+
+        &:after {
+            font-family: 'Linearicons-Free';
+
+        }
+    }
+
+    .open-search {
+        color: $grey;
+
+        &:after {
+            content: "\e86f";
+        }
+
+        &:hover {
+            color: $pink;
+        }
+    }
+
+    .close-search {
+        color: $pink;
+
+        &:after {
+            content: "\e870";
+        }
+
+        &:hover {
+            color: $grey;
+        }
+    }
+
+    .search-form {
+        position: absolute;
+        bottom: -6px;
+        right: 30px;
+        transform-origin: right;
+        width: 0;
+        overflow: hidden;
+        @include transition(all 0.5s ease-in-out);
+
+        @include xs {
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 0;
+            background-color: rgba(#fff, 0.98);
+            z-index: 99;
+        }
+
+        &.search-form-open {
+            width: 300px;
+
+            @include xs {
+                width: 100%;
+            }
+        }
+    }
+
+    .search-cont {
+        position: relative;
+        width: 100%;
+
+        @include xs {
+            width: 95%;
+            margin: 150px auto 0;
+        }
+    }
+
+    .search-input {
+        background-color: #fff;
+        width: 100%;
+        height: 45px;
+        padding: 0 23px;
+        font-size: 14px;
+        text-align: right;
+        color: #a8a8a8;
+        border: 1px solid $pink;
+        @include transition(all 0.3s ease-in-out);
+
+        &::placeholder {
+            text-align: right;
+            color: #a8a8a8;
+            font-size: 14px;
+        }
+
+        &:hover {
+            border: 1px solid $pink;
+        }
+
+        &:focus {
+            border: 1px solid $pink;
+
+            &:hover {
+                border: 1px solid $pink;
+            }
+        }
+
+
+    }
+
+    #{$ltr} .search-input {
+        text-align: left;
+
+        &::placeholder {
+            text-align: left;
+        }
+    }
+
+    .search-button {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        @include gred(0deg);
+        width: 45px;
+        height: 100%;
+        font-size: 14px;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: $purple;
+        }
+    }
+
+    #{$ltr} .search-button {
+        left: auto;
+        right: 0;
+    }
+}
+
+/////////////////////////////////////
+.newsletter-info {
+    font-size: 16px;
+    color: #fff;
+    text-align: right;
+
+    @include xs {
+        text-align: center;
+    }
+}
+
+.newsletter-cont {
+    position: relative;
+    margin-top: 23px;
+
+    @include xs {
+        margin-top: 15px;
+    }
+}
+
+.newsletter-input {
+    background-color: #fff;
+    width: 100%;
+    height: 45px;
+    padding: 0 23px;
+    font-size: 14px;
+    text-align: right;
+    color: #a8a8a8;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        text-align: right;
+        color: #a8a8a8;
+    }
+
+}
+
+
+
+.newsletter-btn {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+    font-size: 14px;
+    color: #fff;
+    @include transition(all 0.7s ease-in-out);
+    @include gred(0deg);
+    @include flex(center, center);
+    background-size: 100%;
+
+    &:after {
+        content: "\e879";
+        font-family: 'Linearicons-Free';
+        font-size: 15px;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover {
+        background-size: 300%;
+    }
+}
+
+
+// html[dir=ltr] .newsletter-btn:after {
+//     content: "\e87a";
+// }

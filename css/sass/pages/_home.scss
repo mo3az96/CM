@@ -1,0 +1,800 @@
+.video-cont {
+    margin-top: 50px;
+
+    @include xs {
+        margin-top: 30px;
+    }
+
+    .Video {
+        @include flex(center, space-between);
+
+        @include xs {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 36px;
+            bottom: 36px;
+            left: 36px;
+            right: 36px;
+            border: 10px solid #fff;
+            border-radius: 100%;
+            opacity: 0;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 36px;
+            bottom: 36px;
+            left: 36px;
+            right: 36px;
+            border: 10px solid #fff;
+            border-radius: 100%;
+            opacity: 0;
+        }
+    }
+
+    .video-anchor {
+        position: relative;
+        display: flex;
+        max-width: 50%;
+
+        @include xs {
+            max-width: none;
+            margin-top: 15px;
+        }
+
+        &:hover {
+            .play {
+                &:after {
+                    animation: pulse 2s linear infinite;
+                }
+
+                &:before {
+                    animation: pulse 2s linear infinite;
+                    animation-delay: 1s;
+                }
+            }
+        }
+    }
+
+    .vidoe-title {
+        padding-left: 45px;
+        max-width: 50%;
+
+        @include xs {
+            max-width: none;
+            padding: 0;
+        }
+    }
+
+    .videospan {
+        color: $grey;
+        font-size: 18px;
+        display: flex;
+
+        @include xs {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    .videotitle {
+        font-family: bold;
+        font-size: 36px;
+        @include text();
+        margin-top: 29px;
+        line-height: 47px;
+
+        @include xs {
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 15px;
+        }
+    }
+}
+
+.services-cont {
+    text-align: center;
+    background-image: url(../images/parallax.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 135px;
+    margin-top: 105px;
+
+    .services-head {
+        position: relative;
+    }
+
+    .servicesspan {
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .servicestitle {
+        font-family: bold;
+        font-size: 36px;
+        color: #fff;
+        margin-top: 29px;
+
+        @include xs {
+            font-size: 25px;
+        }
+    }
+
+    .services {
+        position: relative;
+        @include flex(center, space-between);
+        padding: 0 97px;
+        margin-top: 77px;
+
+        @include xs {
+            padding: 0;
+            margin: 0;
+            flex-direction: column;
+        }
+    }
+
+    .service {
+        @include flex(center, center);
+        flex-direction: column;
+        text-align: center;
+
+        @include xs {
+            margin-top: 35px;
+        }
+
+        &:hover {
+            .service-name {
+                color: $footer;
+            }
+
+            .service-img {
+                animation: vibe 0.7s linear;
+            }
+        }
+    }
+
+    .service-img {
+        width: 101px;
+        height: 101px;
+        @include flex(center, center);
+        margin-bottom: 23px;
+    }
+
+    .service-name {
+        font-size: 20px;
+        font-family: med;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+    }
+}
+
+.about-sec {
+    position: relative;
+
+    .about-pat {
+        position: absolute;
+        top: 238px;
+        left: -34px;
+
+        @include md {
+            display: none;
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+
+    @include md {
+        padding: 50px 0;
+    }
+
+    .about-info {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        background-color: #fff;
+
+        @include md {
+            @include flex(center, flex-start);
+        }
+    }
+
+    &.vision {
+        @include md {
+            margin-bottom: 50px;
+        }
+
+        .about-info {
+            max-width: 58.33333333%;
+            padding-left: 50px;
+            padding-top: 85px;
+            padding-bottom: 102px;
+
+            @include md {
+                max-width: none;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        .about-bgimg {
+            top: -47px;
+            left: 0;
+
+            @include md {
+                left: auto;
+                right: auto;
+                bottom: auto;
+                top: auto;
+            }
+        }
+    }
+
+    &.goals {
+        padding-top: 202px;
+
+        .about-info {
+            max-width: 50%;
+            padding-right: 55px;
+            padding-top: 80px;
+
+            margin-right: auto;
+
+            @include md {
+                max-width: none;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        @include md {
+            padding: 0;
+        }
+
+        .about-bgimg {
+            right: 0;
+            top: 0;
+            z-index: -1;
+
+            @include md {
+                left: auto;
+                right: auto;
+                bottom: auto;
+                top: auto;
+                z-index: 1;
+            }
+        }
+    }
+
+    .about-bgimg {
+        position: absolute;
+
+        @include md {
+            position: relative;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            top: auto;
+            margin-bottom: 20px;
+        }
+    }
+
+    .about-header {
+        font-family: bold;
+        @include text();
+        margin-top: 26px;
+        margin-bottom: 15px;
+
+        @include md {
+            margin: 20px 0;
+        }
+    }
+
+    .about-desc {
+        color: $grey;
+        font-size: 18px;
+        line-height: 1.778;
+    }
+}
+
+.numbers-cont {
+    text-align: center;
+    background-image: url(../images/parallax2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    padding-top: 132px;
+    padding-bottom: 138px;
+    margin-top: 100px;
+
+    @include xs {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .numbers {
+        position: relative;
+        @include flex(center, space-between);
+
+        @include xs {
+            flex-direction: column;
+        }
+    }
+
+    .number {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        color: #fff;
+
+        @include xs {
+            margin-top: 35px;
+            @include flex(center, center);
+        }
+    }
+
+    .count-name {
+        font-size: 18px;
+    }
+
+    .count-value {
+        font-size: 72px;
+        font-family: light;
+    }
+
+    .count {
+        font-size: 60px;
+        font-family: bold;
+    }
+}
+
+
+.parallax-overlay {
+    @include gred(0deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.902;
+}
+
+.clients-cont {
+    @include xs {
+        text-align: center;
+    }
+
+    .swiper-pagination-bullets {
+
+        @include xs {
+            right: auto;
+            left: auto;
+            bottom: auto;
+            position: relative;
+        }
+
+        .swiper-pagination-bullet {
+            width: 23px;
+            height: 2px;
+            background: #cbcbcb;
+            margin: 0 1.5px;
+            outline: none !important;
+            box-shadow: none !important;
+            opacity: 1;
+            @include transition(all 0.3s ease-in-out);
+            display: none;
+            border-radius: 0;
+
+            &:hover {
+                background: $purple;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background: $purple;
+            }
+
+            @include xs {
+                display: inline-block;
+            }
+        }
+    }
+
+    ._1st-sec {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        height: 400px;
+
+        @include xs {
+            height: auto;
+
+        }
+    }
+
+    .boldText {
+        @include text();
+        font-size: 25px;
+        font-family: bold;
+        line-height: 1.44;
+        margin-top: 20px;
+        margin-bottom: 44px;
+
+        @include xs {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .lightText {
+        font-size: 20px;
+        color: $grey;
+        @include flex(center, flex-start);
+
+        &:before {
+            background-color: $purple;
+            width: 1px;
+            height: 17px;
+            content: "";
+            display: block;
+            margin-left: 20px;
+        }
+
+        @include xs {
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    .moreBtn {
+        text-decoration: underline;
+        color: #b5b5b5;
+        font-size: 16px;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $pink;
+            text-decoration: none;
+        }
+
+        @include xs {
+            margin: auto;
+            margin-top: 25px;
+            display: inline-flex;
+        }
+    }
+
+    ._2nd-sec {
+        @include flex(flex-start, flex-start);
+        flex-wrap: wrap;
+
+        @include xs {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .clients-item {
+        width: 33%;
+        height: 200px;
+        @include flex(center, center);
+
+        @include xs {
+            width: auto;
+            margin: auto;
+            height: 125px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-bottom: 1px solid #f2f2f2;
+
+            @include xs {
+                border: none;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            border-right: 1px solid #f2f2f2;
+            border-left: 1px solid #f2f2f2;
+
+            @include xs {
+                border: none;
+            }
+        }
+    }
+
+    .client-anchor {
+        img {
+            filter: grayscale(100%);
+            opacity: 0.4;
+            transition: all 0.5s ease;
+        }
+
+
+        &:hover {
+            img {
+                filter: grayscale(0%);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.news-cont {
+    background-color: #f7f7f7;
+    padding-top: 90px;
+    padding-bottom: 85px;
+
+    @include xs {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .swiper-pagination-bullets {
+
+        @include xs {
+            right: auto;
+            left: auto;
+            bottom: auto;
+            position: relative;
+            margin-top: 25px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 23px;
+            height: 2px;
+            background: #cbcbcb;
+            margin: 0 1.5px;
+            outline: none !important;
+            box-shadow: none !important;
+            opacity: 1;
+            @include transition(all 0.3s ease-in-out);
+            display: none;
+            border-radius: 0;
+
+            &:hover {
+                background: $purple;
+            }
+
+            &.swiper-pagination-bullet-active {
+                background: $purple;
+            }
+
+            @include xs {
+                display: inline-block;
+            }
+        }
+    }
+
+    .news-head {
+        font-size: 30px;
+        font-family: bold;
+        color: $grey;
+        text-align: center;
+    }
+
+    .news {
+        position: relative;
+        margin-top: 5px;
+        display: flex;
+
+        @include xs {
+            display: block;
+        }
+    }
+
+    .news-pat {
+        position: absolute;
+        top: 0;
+        right: -33px;
+        transform: rotate(180deg);
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .new {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        position: relative;
+        padding-top: 37px;
+        width: 50%;
+        margin-left: 31px;
+
+        &:last-of-type {
+            margin-left: 0;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    .new-img {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            @include transition(all 0.5s ease-in-out);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.7)));
+            background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7));
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        &:hover {
+            &:after {
+                -webkit-animation: shape 0.7s linear;
+                animation: shape 0.7s linear;
+            }
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .date-bg {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        @include gred(0deg);
+        width: 50px;
+        height: 50px;
+        opacity: 0.902;
+        z-index: 2;
+    }
+
+    .date {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        color: #fff;
+        text-align: center;
+        font-family: med;
+        @include flex(center, center);
+        flex-direction: column;
+        cursor: default;
+        z-index: 2;
+
+        .day {
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .mounth {
+            font-size: 12px;
+        }
+    }
+
+
+    .new-title {
+        font-family: med;
+        color: $grey;
+        font-size: 20px;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+        margin-top: 30px;
+        margin-bottom: 19px;
+
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    .new-desc {
+        font-size: 16px;
+        color: $grey;
+        margin-bottom: 28px;
+    }
+
+    .moreBtn {
+        text-decoration: underline;
+        color: #b5b5b5;
+        font-size: 16px;
+        @include transition(all 0.3s ease-in-out);
+        cursor: pointer;
+
+        &:hover {
+            color: $pink;
+            text-decoration: none;
+        }
+    }
+}
+
+.join {
+    float: none;
+    margin: auto;
+    text-align: center;
+    margin-top: 77px;
+    padding-bottom: 99px;
+
+    @include xs {
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .LightText {
+        font-size: 18px;
+        color: $grey;
+    }
+
+    .BoldText {
+        font-size: 36px;
+        color: $grey;
+        font-family: bold;
+        margin-bottom: 50px;
+        margin-top: 25px;
+
+        @include xs {
+            font-size: 20px;
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+    }
+
+    .joinBtn {
+        font-family: med;
+        color: #fff;
+        font-size: 20px;
+        @include gred(0deg);
+        width: 200px;
+        height: 60px;
+        @include flex(center, center);
+        margin: auto;
+        background-size: 100%;
+        @include transition(all 0.7s ease-in-out);
+
+        &:hover {
+            background-size: 300%;
+        }
+
+        @include xs {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+header {
+    padding-top: 20px;
+
+    .header {
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        max-width: 206px;
+    }
+
+    .top-links {
+        @include flex(center, flex-start);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .top-link {
+        color: $top-links;
+        margin-left: 31px;
+        font-size: 13px;
+        font-family: med;
+        @include flex(flex-start, flex-start);
+        direction: ltr;
+        @include transition(all 0.3s ease-in-out);
+
+        span {
+            font-size: 16px;
+            margin-left: 7px;
+
+            &.way {
+                transform: none;
+            }
+        }
+
+        &.phone {
+            span {
+                transform: rotate(270deg);
+
+                &.way {
+                    transform: none;
+                }
+            }
+        }
+
+        &:hover {
+            color: $pink;
+        }
+    }
+
+    .main-header {
+        @include flex(flex-end, space-between);
+        padding-top: 8px;
+    }
+
+    ._1st-sec {
+        @include flex(center, flex-start);
+        margin-bottom: 6px;
+    }
+}
