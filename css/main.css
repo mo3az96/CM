@@ -1165,6 +1165,7 @@ header ._1st-sec {
     left: auto;
     bottom: auto;
     position: relative;
+    margin-top: 25px;
   }
 }
 .clients-cont .swiper-pagination-bullets .swiper-pagination-bullet {
