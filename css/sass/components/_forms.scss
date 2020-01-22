@@ -108,13 +108,7 @@
 
     }
 
-    #{$ltr} .search-input {
-        text-align: left;
 
-        &::placeholder {
-            text-align: left;
-        }
-    }
 
     .search-button {
         position: absolute;
@@ -135,11 +129,6 @@
         &:hover {
             background-color: $purple;
         }
-    }
-
-    #{$ltr} .search-button {
-        left: auto;
-        right: 0;
     }
 }
 

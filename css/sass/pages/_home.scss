@@ -596,6 +596,10 @@
         font-family: bold;
         color: $grey;
         text-align: center;
+
+        @include xs {
+            font-size: 20px;
+        }
     }
 
     .news {

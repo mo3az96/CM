@@ -216,12 +216,6 @@ html {
 .search .search-input:focus:hover {
   border: 1px solid #de078d;
 }
-.search html[dir=ltr] .search-input {
-  text-align: left;
-}
-.search html[dir=ltr] .search-input::placeholder {
-  text-align: left;
-}
 .search .search-button {
   position: absolute;
   left: 0;
@@ -244,10 +238,6 @@ html {
 }
 .search .search-button:hover {
   background-color: #a22891;
-}
-.search html[dir=ltr] .search-button {
-  left: auto;
-  right: 0;
 }
 
 .newsletter-info {
@@ -1476,6 +1466,11 @@ header ._1st-sec {
   color: #333;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .news-cont .news-head {
+    font-size: 20px;
+  }
+}
 .news-cont .news {
   position: relative;
   margin-top: 5px;
@@ -1680,6 +1675,346 @@ header ._1st-sec {
   }
 }
 
+html[dir=ltr] header .top-links {
+  left: 0;
+  right: auto;
+}
+html[dir=ltr] header .top-link {
+  margin-left: 0;
+  margin-right: 31px;
+}
+html[dir=ltr] header .top-link span {
+  margin-right: 7px;
+  margin-left: 0;
+}
+html[dir=ltr] header .top-link.phone span {
+  transform: none;
+}
+html[dir=ltr] .mo-navbar {
+  margin-right: 0;
+  margin-left: 0;
+}
+html[dir=ltr] .mo-navbar .nav-li {
+  margin-right: 20px;
+  margin-left: 0;
+}
+html[dir=ltr] .mo-navbar .nav-anchor {
+  font-size: 16px;
+}
+html[dir=ltr] .mo-dropdown > .nav-anchor:after {
+  margin-left: 4px;
+  margin-right: 0;
+}
+html[dir=ltr] .mo-dropdown .dropmenu {
+  transform: translate(20%, 35px);
+}
+html[dir=ltr] .mo-dropdown .dropmenu .nav-li {
+  margin: 7.5px 0;
+}
+html[dir=ltr] .mo-dropdown .dropmenu .nav-anchor {
+  font-size: 15px;
+  white-space: nowrap;
+}
+html[dir=ltr] .search .search-form {
+  left: 30px;
+  right: auto;
+  transform-origin: left;
+}
+html[dir=ltr] .search .search-form.search-form-open {
+  width: 250px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .search .search-form.search-form-open {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .search .search-form {
+    left: 0;
+  }
+}
+html[dir=ltr] .search .search-input {
+  text-align: left;
+  padding: 0 15px;
+}
+html[dir=ltr] .search .search-input::placeholder {
+  text-align: left;
+  color: #a8a8a8;
+  font-size: 14px;
+}
+html[dir=ltr] .search .search-button {
+  left: auto;
+  right: 0;
+}
+html[dir=ltr] .main-slider .slider-pattern {
+  right: auto;
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+html[dir=ltr] .main-slider .slide-info {
+  left: 500px;
+  right: auto;
+  padding-left: 48px;
+  padding-right: 0;
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .main-slider .slide-info {
+    right: 0;
+    left: auto;
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .main-slider .slide-info {
+    left: auto;
+    right: auto;
+    padding: 0;
+  }
+}
+html[dir=ltr] .main-slider .slide-info-head {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .main-slider .slide-info-head {
+    font-size: 20px;
+  }
+}
+html[dir=ltr] .main-slider .swiper-pagination-bullets {
+  left: 620px;
+  right: auto;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .main-slider .swiper-pagination-bullets {
+    right: auto;
+    left: auto;
+  }
+}
+html[dir=ltr] .video-cont .vidoe-title {
+  padding-left: 0;
+  padding-right: 45px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .video-cont .vidoe-title {
+    padding: 0;
+  }
+}
+html[dir=ltr] .video-cont .videotitle {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .video-cont .videotitle {
+    font-size: 20px;
+  }
+}
+html[dir=ltr] .services-cont .servicestitle {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .services-cont .servicestitle {
+    font-size: 20px;
+  }
+}
+html[dir=ltr] .services-cont .services {
+  padding: 0 0;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .services-cont .services {
+    padding: 0;
+  }
+}
+html[dir=ltr] .services-cont .service-name {
+  font-size: 18px;
+}
+html[dir=ltr] .about-sec .about-pat {
+  left: auto;
+  right: -34px;
+  transform: rotate(270deg);
+}
+html[dir=ltr] .about.vision .about-info {
+  padding-right: 50px;
+  padding-left: 0;
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .about.vision .about-info {
+    padding: 0;
+  }
+}
+html[dir=ltr] .about.vision .about-bgimg {
+  left: auto;
+  right: 0;
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .about.vision .about-bgimg {
+    left: auto;
+    right: auto;
+  }
+}
+html[dir=ltr] .about.goals {
+  padding-top: 188px;
+}
+html[dir=ltr] .about.goals .about-info {
+  padding-left: 55px;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: auto;
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .about.goals .about-info {
+    padding: 0;
+  }
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .about.goals {
+    padding: 0;
+  }
+}
+html[dir=ltr] .about.goals .about-bgimg {
+  left: 0;
+  right: auto;
+}
+@media (max-width: 1199px) {
+  html[dir=ltr] .about.goals .about-bgimg {
+    left: auto;
+    right: auto;
+  }
+}
+html[dir=ltr] .numbers-cont .count-value {
+  font-size: 60px;
+}
+html[dir=ltr] .numbers-cont .count {
+  font-size: 50px;
+}
+html[dir=ltr] .clients-cont .boldText {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .clients-cont .boldText {
+    font-size: 18px;
+  }
+}
+html[dir=ltr] .clients-cont .lightText {
+  font-size: 18px;
+}
+html[dir=ltr] .clients-cont .lightText:before {
+  margin-left: 0;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .clients-cont .lightText {
+    font-size: 16px;
+  }
+}
+html[dir=ltr] .news-cont .news-pat {
+  left: -33px;
+  right: auto;
+  transform: rotate(90deg);
+}
+html[dir=ltr] .news-cont .new {
+  margin-left: 0;
+  margin-right: 31px;
+}
+html[dir=ltr] .news-cont .new:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+html[dir=ltr] .news-cont .date-bg {
+  left: 11px;
+  right: auto;
+}
+html[dir=ltr] .news-cont .date {
+  left: 11px;
+  right: auto;
+}
+html[dir=ltr] .join .BoldText {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .join .BoldText {
+    font-size: 20px;
+  }
+}
+html[dir=ltr] footer .contact {
+  margin-right: 115px;
+  margin-left: 0;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] footer .contact {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+html[dir=ltr] footer .contact:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+html[dir=ltr] footer .contact .sign {
+  margin-left: 0;
+  margin-right: 23px;
+}
+html[dir=ltr] footer .contact.phone .sign:before {
+  transform: none;
+}
+html[dir=ltr] .linksheading {
+  text-align: left;
+}
+html[dir=ltr] .foot-link:hover {
+  transform: translateX(8px);
+}
+html[dir=ltr] .social-link {
+  margin-left: 0;
+  margin-right: 9px;
+}
+html[dir=ltr] .social-link:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+html[dir=ltr] .newsletter-info {
+  text-align: left;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .newsletter-info {
+    text-align: center;
+  }
+}
+html[dir=ltr] .newsletter-input {
+  text-align: left;
+}
+html[dir=ltr] .newsletter-input::placeholder {
+  text-align: left;
+}
+html[dir=ltr] .newsletter-btn {
+  left: auto;
+  right: 0px;
+}
+html[dir=ltr] .newsletter-btn:after {
+  content: "";
+}
+html[dir=ltr] .menu-open {
+  margin-left: 0;
+  margin-right: 25px;
+}
+html[dir=ltr] .navbar-cont .close-menu {
+  left: auto;
+  right: 25px;
+}
+html[dir=ltr] .navbar-cont .top-link {
+  left: 25px;
+  right: auto;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .navbar-cont .mo-navbar {
+    left: 0;
+    right: auto;
+    transform-origin: left;
+  }
+  html[dir=ltr] .navbar-cont .dropmenu {
+    transform: none;
+    left: auto;
+    right: auto;
+    text-align: left;
+  }
+}
+
 footer {
   padding-top: 70px;
   text-align: center;
@@ -1701,7 +2036,6 @@ footer .contacts {
   }
 }
 footer .contact {
-  direction: ltr;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1720,7 +2054,7 @@ footer .contact:last-of-type {
 }
 footer .contact .contact-info {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   font-size: 18px;
@@ -1764,6 +2098,7 @@ footer .contact .sign::before {
   height: 48px;
 }
 footer .contact .way {
+  direction: ltr;
   font-size: 30px;
   font-family: bold;
   -moz-transition: all 0.3s ease-in-out;
