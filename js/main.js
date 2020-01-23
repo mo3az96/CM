@@ -134,25 +134,25 @@ $(document).ready(function () {
             }
         });
     }
-    // $(window).scroll(function () {
-    //     if ($("div").hasClass("cards-numbers")) {
-    //         if (a === 0 && $(this).scrollTop() >= ($(".cards-numbers").offset().top) - 700) {
-    //             $(".loader-span").css("width", "100%");
-    //             $('.count').each(function () {
-    //                 $(this).prop('Counter', 0).animate({
-    //                     Counter: $(this).text()
-    //                 }, {
-    //                     duration: 1000,
-    //                     easing: 'swing',
-    //                     step: function (now) {
-    //                         $(this).text(Math.ceil(now));
-    //                     }
-    //                 });
-    //             });
-    //             a = 1
-    //         }
-    //     }
+    var a = 0;
+    $(window).scroll(function () {
+        if ($("div").hasClass("numbers-cont")) {
+            if (a === 0 && $(this).scrollTop() >= ($(".numbers-cont").offset().top) - 500) {
+                $('.count').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+                a = 1
+            }
+        }
 
 
-    // });
+    });
 });

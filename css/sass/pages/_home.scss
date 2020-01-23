@@ -360,6 +360,7 @@
         @include flex(flex-start, flex-start);
         flex-direction: column;
         color: #fff;
+        width: 180px;
 
         @include xs {
             margin-top: 35px;

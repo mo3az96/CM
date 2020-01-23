@@ -1285,6 +1285,7 @@ ol.breadcrumb li a:hover {
   justify-content: flex-start;
   flex-direction: column;
   color: #fff;
+  width: 180px;
 }
 @media (max-width: 767px) {
   .numbers-cont .number {
@@ -1960,6 +1961,9 @@ html[dir=ltr] .numbers-cont .count-value {
 html[dir=ltr] .numbers-cont .count {
   font-size: 50px;
 }
+html[dir=ltr] .numbers-cont .number {
+  width: auto;
+}
 html[dir=ltr] .clients-cont .boldText {
   font-size: 20px;
 }
@@ -2423,9 +2427,6 @@ footer .contact .way {
   footer .contact .way {
     font-size: 20px;
   }
-}
-footer .contact.phone .sign:before {
-  transform: rotate(270deg);
 }
 footer .contact:hover .sign {
   background-size: 300%;
