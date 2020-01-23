@@ -1,97 +1,20 @@
 #{$ltr} {
     header {
-        .top-links {
-            left: 0;
-            right: auto;
-        }
+        direction: rtl;
 
-        .top-link {
-            margin-left: 0;
-            margin-right: 31px;
-
-            span {
-                margin-right: 7px;
-                margin-left: 0;
-
-            }
-
-            &.phone {
-                span {
-                    transform: none;
-                }
-            }
-        }
-    }
-
-    .mo-navbar {
-        margin-right: 0;
-        margin-left: 0;
-
-        .nav-li {
-            margin-right: 20px;
-            margin-left: 00;
-        }
-
-        .nav-anchor {
-            font-size: 16px;
-        }
-    }
-
-    .mo-dropdown {
-
-        >.nav-anchor {
-            &:after {
-                margin-left: 4px;
-                margin-right: 0;
-            }
-        }
-
-        .dropmenu {
-            transform: translate(20%, 35px);
-
-            .nav-li {
-                margin: 7.5px 0;
-            }
+        .mo-dropdown {
+            direction: ltr;
 
             .nav-anchor {
-                font-size: 15px;
-                white-space: nowrap;
-            }
-
-        }
-
-        &:hover {
-            .dropmenu {
-                transform: translate(-50%, 0);
-
-                @include xs {
-                    transform: none;
+                &:after {
+                    margin-left: 4px;
+                    margin-right: 0;
                 }
             }
         }
     }
 
     .search {
-
-        .search-form {
-            left: 30px;
-            right: auto;
-            transform-origin: left;
-
-            &.search-form-open {
-                width: 250px;
-
-                @include xs {
-                    width: 100%;
-                }
-            }
-
-            @include xs {
-                left: 0;
-            }
-        }
-
-
         .search-input {
             text-align: left;
             padding: 0 15px;
@@ -266,14 +189,6 @@
     }
 
     .numbers-cont {
-
-        .count-value {
-            font-size: 60px;
-        }
-
-        .count {
-            font-size: 50px;
-        }
 
         .number {
             width: auto;

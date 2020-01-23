@@ -44,7 +44,7 @@
         background-color: #fff;
         border-radius: 2px;
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
-        padding: 10px 9px 8px 7px;
+        padding: 10px 20px 8px 20px;
         text-align: center;
         visibility: hidden;
         opacity: 0;
@@ -69,11 +69,17 @@
         }
 
         .nav-li {
-            margin: 7.5px 0;
+            margin: 5px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+
+            &:last-of-type {
+                border: none;
+            }
         }
 
         .nav-anchor {
-            font-size: 16px;
+            font-size: 15px;
             white-space: nowrap;
         }
 

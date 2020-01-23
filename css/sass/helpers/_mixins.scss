@@ -19,6 +19,14 @@
     background-image: -ms-linear-gradient($deg, $purple 0%, $pink 100%);
 }
 
+@mixin hovergred($deg) {
+    background-image: linear-gradient($deg, $purple, $pink, $pink, $purple);
+    background-image: linear-gradient($deg, $purple, $pink, $pink, $purple);
+    background-image: linear-gradient($deg, $purple, $pink, $pink, $purple);
+    background-size: 200%;
+}
+
+
 @mixin text() {
     background-image: -moz-linear-gradient(0deg, $purple 0%, $pink 100%);
     background-image: -webkit-linear-gradient(0deg, $purple 0%, $pink 100%);

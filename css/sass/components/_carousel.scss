@@ -98,7 +98,8 @@
             bottom: auto;
             padding: 0;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
         }
     }
 
@@ -124,6 +125,7 @@
         color: $grey;
         font-size: 18px;
         line-height: 1.778;
+        margin-top: 10px;
     }
 
     .swiper-pagination-bullets {
@@ -155,11 +157,6 @@
 
             &.swiper-pagination-bullet-active {
                 background: $purple;
-            }
-
-            @include xs {
-                height: 2px;
-                border-radius: 0;
             }
         }
     }

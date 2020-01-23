@@ -1,17 +1,53 @@
 header {
     padding-top: 20px;
+    height: 113px;
 
     @include xs {
         padding-top: 15px;
     }
 
+    .fixed-header {
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        z-index: 99;
+        @include transition(all 0.3s ease-in-out);
+
+        &.fixed-scroll {
+            top: 0;
+            padding: 10px 0;
+
+            .logo {
+                width: 150px;
+            }
+
+            .main-header {
+                @include flex(center, space-between);
+                padding: 0;
+            }
+
+            ._1st-sec {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .header {
         position: relative;
+        height: 18px;
+
+        @include xs {
+            display: none;
+        }
     }
 
     .logo {
         display: flex;
         width: 206px;
+
+        img {
+            @include transition(all 0.3s ease-in-out);
+        }
 
         @include xs {
             width: 150px;
@@ -25,9 +61,7 @@ header {
         top: 0;
         right: 0;
 
-        @include xs {
-            display: none;
-        }
+
     }
 
     .top-link {
@@ -65,7 +99,6 @@ header {
 
     .main-header {
         @include flex(flex-end, space-between);
-        padding-top: 8px;
 
         @include xs {
             padding: 0;
