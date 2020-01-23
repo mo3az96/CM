@@ -231,13 +231,14 @@
         }
 
         &.goals {
-            padding-top: 188px;
+            padding-top: 158px;
 
             .about-info {
                 padding-left: 55px;
                 padding-right: 0;
                 margin-right: 0;
                 margin-left: auto;
+                padding-bottom: 30px;
 
                 @include md {
                     padding: 0;

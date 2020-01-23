@@ -234,7 +234,7 @@
             max-width: 58.33333333%;
             padding-left: 50px;
             padding-top: 85px;
-            padding-bottom: 102px;
+            padding-bottom: 89px;
 
             @include md {
                 max-width: none;
@@ -258,7 +258,8 @@
     }
 
     &.goals {
-        padding-top: 202px;
+        padding-top: 158px;
+
 
         .about-info {
             max-width: 50%;

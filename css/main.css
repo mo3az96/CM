@@ -1149,7 +1149,7 @@ ol.breadcrumb li a:hover {
   max-width: 58.33333333%;
   padding-left: 50px;
   padding-top: 85px;
-  padding-bottom: 102px;
+  padding-bottom: 89px;
 }
 @media (max-width: 1199px) {
   .about.vision .about-info {
@@ -1172,7 +1172,7 @@ ol.breadcrumb li a:hover {
   }
 }
 .about.goals {
-  padding-top: 202px;
+  padding-top: 158px;
 }
 .about.goals .about-info {
   max-width: 50%;
@@ -1925,13 +1925,14 @@ html[dir=ltr] .about.vision .about-bgimg {
   }
 }
 html[dir=ltr] .about.goals {
-  padding-top: 188px;
+  padding-top: 158px;
 }
 html[dir=ltr] .about.goals .about-info {
   padding-left: 55px;
   padding-right: 0;
   margin-right: 0;
   margin-left: auto;
+  padding-bottom: 30px;
 }
 @media (max-width: 1199px) {
   html[dir=ltr] .about.goals .about-info {
