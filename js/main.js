@@ -1,6 +1,9 @@
 $(window).on("load", function () {
 });
 $(document).ready(function () {
+    $('select').selectpicker({
+        dropupAuto: false
+    });
     new WOW().init();
     $('.search-control').click(function () {
         $(this).toggleClass("open-search");
@@ -131,5 +134,25 @@ $(document).ready(function () {
             }
         });
     }
+    // $(window).scroll(function () {
+    //     if ($("div").hasClass("cards-numbers")) {
+    //         if (a === 0 && $(this).scrollTop() >= ($(".cards-numbers").offset().top) - 700) {
+    //             $(".loader-span").css("width", "100%");
+    //             $('.count').each(function () {
+    //                 $(this).prop('Counter', 0).animate({
+    //                     Counter: $(this).text()
+    //                 }, {
+    //                     duration: 1000,
+    //                     easing: 'swing',
+    //                     step: function (now) {
+    //                         $(this).text(Math.ceil(now));
+    //                     }
+    //                 });
+    //             });
+    //             a = 1
+    //         }
+    //     }
 
+
+    // });
 });
