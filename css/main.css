@@ -1178,6 +1178,7 @@ ol.breadcrumb li a:hover {
   max-width: 50%;
   padding-right: 55px;
   padding-top: 80px;
+  padding-bottom: 30px;
   margin-right: auto;
 }
 @media (max-width: 1199px) {
