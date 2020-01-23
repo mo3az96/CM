@@ -308,6 +308,10 @@ html {
   background-size: 300%;
 }
 
+button {
+  border: none;
+}
+
 .mo-navbar {
   display: flex;
   align-items: center;
