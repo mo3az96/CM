@@ -63,6 +63,10 @@
         &:hover {
             .dropmenu {
                 transform: translate(-50%, 0);
+
+                @include xs {
+                    transform: none;
+                }
             }
         }
     }

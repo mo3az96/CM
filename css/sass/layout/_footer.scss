@@ -251,3 +251,13 @@ footer {
         margin: 35px 0;
     }
 }
+
+.contact {
+    &.mail {
+        .sign {
+            align-items: flex-start;
+            padding-top: 11px;
+            padding-left: 1px;
+        }
+    }
+}

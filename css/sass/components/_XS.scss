@@ -114,3 +114,18 @@
         }
     }
 }
+
+
+.close-xs-search {
+    display: none;
+
+    @include xs {
+        display: flex;
+        font-size: 22px;
+        @include flex(center, center);
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+        color: $purple;
+        margin-top: 50px;
+    }
+}
