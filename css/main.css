@@ -2375,10 +2375,12 @@ footer {
 @media (max-width: 992px) {
   footer {
     padding: 50px 0 0;
+    background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #333;
     background-attachment: unset;
+    margin-bottom: 25px;
   }
 }
 footer .contacts {
@@ -2575,7 +2577,6 @@ footer .contact:hover .way {
 }
 @media (max-width: 767px) {
   .copytight {
-    margin-top: 35px;
     margin-bottom: 20px;
   }
 }

@@ -10,11 +10,12 @@ footer {
 
     @include sm {
         padding: 50px 0 0;
-
+        background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
         background-color: $grey;
         background-attachment: unset;
+        margin-bottom: 25px;
     }
 
     .contacts {
@@ -210,7 +211,6 @@ footer {
     margin-bottom: 43px;
 
     @include xs {
-        margin-top: 35px;
         margin-bottom: 20px;
     }
 }
