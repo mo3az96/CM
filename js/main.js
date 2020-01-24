@@ -180,4 +180,15 @@ $(document).ready(function () {
     if ($(window).width() >= 992) {
         $("footer").css("background-position-y", $(window).innerHeight() - ($("footer").outerHeight() + 65));
     }
+
+
+    $(window).scroll(function () {
+        var scrollVal = $(this).scrollTop() - 75;
+        if ($(this).scrollTop() >= 38) {
+            $('.breadcrumb-sec').css('background-position', '0 ' + scrollVal + 'px');
+        } else {
+            $('.breadcrumb-sec').css('background-position', '0 0');
+        }
+
+    });
 });
